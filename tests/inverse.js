@@ -35,9 +35,9 @@ QUnit.module('Тестируем функцию inverse', function () {
 	});
 
 	QUnit.test('Функция выбрасывает ошибку на некорректные данные', function (assert) {
-		assert.throws(function() {inverse(123);}, TypeError);
-		assert.throws(function() {inverse([1, 2, 3], 'a');}, TypeError);
-		assert.throws(function() {inverse(123, 'a');}, TypeError);
+		assert.throws(() => {inverse(123);}, TypeError);
+		assert.throws(() => {inverse([1, 2, 3], 'a');}, TypeError);
+		assert.throws(() => {inverse(123, 'a');}, TypeError);
 
 	});
 });
